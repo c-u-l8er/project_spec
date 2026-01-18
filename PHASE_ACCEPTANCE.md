@@ -66,8 +66,8 @@ For each phase completion, capture:
 - [ ] Permission taxonomy is consistent across specs:
   - [ ] event bus permissions use `event:*`
   - [ ] network uses `network:egress:<host-or-tag>`
-- [ ] Runtime protocol is documented and concrete:
-  - [ ] `opensentience.org/project_spec/RUNTIME_PROTOCOL.md` exists and is treated as MVP baseline.
+- [x] Runtime protocol is documented and concrete:
+  - [x] `opensentience.org/project_spec/RUNTIME_PROTOCOL.md` exists and is treated as MVP baseline.
 - [ ] A single source-of-truth exists for “repo-first `.fleetprompt/`” convention.
 - [ ] Specs for FleetPrompt, Graphonomous, A2A Traffic, Delegatic include:
   - architecture, interfaces, execution model, resource surfaces, permissions, security, test plan
@@ -80,9 +80,9 @@ For each phase completion, capture:
 ## Phase 1 — OpenSentience Core MVP: catalog + enablement + audit + launcher (Weeks 1–2)
 
 ### CLI acceptance (minimum viable commands)
-- [ ] List discovered agents (local scan roots).
+- [x] List discovered agents (local scan roots).
 - [ ] Show agent detail (manifest display).
-- [ ] Install (clone/fetch) an agent repo into `~/.opensentience/`.
+- [x] Install (clone/fetch) an agent repo into `~/.opensentience/`.
 - [ ] Build/compile (explicit trust boundary; separately invoked from install).
 - [ ] Enable agent (approve requested permissions; store approved subset).
 - [ ] Run agent (separate OS process).
@@ -91,30 +91,31 @@ For each phase completion, capture:
 *(Command names can vary; behavior is what matters.)*
 
 ### UI acceptance (if UI is included in Phase 1)
-- [ ] UI binds to `127.0.0.1` by default.
-- [ ] UI shows agents list + agent detail (read-only is acceptable).
+- [x] UI binds to `127.0.0.1` by default.
+- [x] UI shows agents list + agent detail (read-only is acceptable).
 - [ ] UI displays requested vs approved permissions.
 
 ### Audit acceptance
 For each action below, a durable audit entry exists (secret-free):
-- [ ] discovery/index update (manifest found/updated)
-- [ ] install (source + ref)
+- [x] discovery/index update (manifest found/updated)
+- [x] install (source + ref)
 - [ ] build/compile (explicit trust boundary)
 - [ ] enable (permission approvals recorded)
 - [ ] run (command + timestamps)
 - [ ] stop (timestamp, reason if any)
 
 Audit entries must include (where possible):
-- [ ] actor identity (human/system)
-- [ ] agent_id
+- [x] actor identity (human/system)
+- [x] agent_id
 - [ ] correlation_id when triggered by UI session
 
 ### Security acceptance
-- [ ] Discovery/indexing does not execute agent code.
-- [ ] Install/build is explicit and auditable.
+- [x] Discovery/indexing does not execute agent code.
+- [x] Install is explicit and auditable.
+- [ ] Build is explicit and auditable.
 - [ ] Enablement requires explicit approval; deny-by-default.
 - [ ] No secrets are persisted in audit entries.
-- [ ] UI state-changing actions require token + CSRF.
+- [x] UI state-changing actions require token + CSRF.
 
 ### Exit criteria
 - [ ] Core can manage an agent lifecycle end-to-end and prove it via audit log.
